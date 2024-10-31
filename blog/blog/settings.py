@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'main',
     'rest_framework.authtoken',
-    'django_jazmin',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -158,7 +159,9 @@ REST_FRAMEWORK = {
         'anon': '1000/day',
         'user': '1000/day',
         'food_anon':'3/day'
-    }
+    },
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10, 
 }
 
 # settings.py
@@ -168,3 +171,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'shaxobiddinnormatov2@gmail.com'  
 EMAIL_HOST_PASSWORD = 'shaxobiddin2004'  
+
+
+
+
+
